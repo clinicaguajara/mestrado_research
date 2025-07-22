@@ -1,6 +1,4 @@
-streamlit>=1.32
-pysupabase>=1.0.3           # Cliente Supabase oficial em Python
-requests>=2.31              # Usado indiretamente por pysupabase
-python-dotenv>=1.0.1        # (opcional, caso use .env local)
-pandas>=2.2.2               # Para manipulação de dados e exportações
-scipy>=1.13.1               # Para cálculo de percentis e stats
+streamlit
+scipy
+pandas
+supabase
