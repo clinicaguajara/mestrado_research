@@ -14,9 +14,8 @@ def render_questionario_neurociencia(blocos: Dict[str, List[str]], metadados_blo
         contador = 1
         campos_vazios = []
 
-        with st.expander("🧾 Leia o Termo de Consentimento Livre e Esclarecido (TCLE)", expanded=True):
+        with st.expander("🧾 TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO (TCLE)", expanded=False):
             st.markdown("""
-            ### TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO (TCLE)
 
             **Pesquisador Responsável:** Pedro Henrique Ramos Pinto  
             **Instituição:** Universidade Federal da Paraíba  
