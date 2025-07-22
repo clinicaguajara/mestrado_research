@@ -14,6 +14,36 @@ def render_questionario_neurociencia(blocos: Dict[str, List[str]], metadados_blo
         contador = 1
         campos_vazios = []
 
+        with st.expander("🧾 Leia o Termo de Consentimento Livre e Esclarecido (TCLE)", expanded=True):
+            st.markdown("""
+            ### TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO (TCLE)
+
+            **Pesquisador Responsável:** Pedro Henrique Ramos Pinto  
+            **Instituição:** Universidade Federal da Paraíba  
+            **Contato:** (67) 99107-1045  
+
+            **1. Apresentação da Pesquisa**  
+            Você está sendo convidado(a) a participar desta pesquisa, que tem como objetivo investigar a relação entre características cognitivas e emocionais.  
+            Para isso, você responderá a questionários sobre suas experiências e características psicológicas.
+
+            **2. Procedimentos**  
+            A pesquisa consiste no preenchimento de uma série de questionários online, com duração estimada de 20 minutos.  
+            As perguntas abordarão aspectos relacionados à sua atenção, emoções e experiência cotidiana.  
+            Sua participação é voluntária e você pode desistir a qualquer momento, sem necessidade de justificativa.
+
+            **3. Riscos e Benefícios**  
+            Embora não existam riscos físicos, alguns participantes podem sentir desconforto emocional ao refletir sobre questões relacionadas à ansiedade, depressão ou experiências pessoais.  
+            Caso sinta necessidade, você pode interromper sua participação a qualquer momento.  
+            Embora não haja benefícios diretos para você, sua colaboração será essencial para avanços no campo da neurociência e psicologia.
+
+            **4. Confidencialidade**  
+            As informações coletadas serão utilizadas exclusivamente para fins acadêmicos e científicos.  
+            Os dados serão analisados de forma agregada, sem qualquer identificação pessoal.  
+            No final do processo, o banco de dados dessa pesquisa será publicado.  
+            Entretanto, todas as medidas de segurança serão adotadas para garantir sua privacidade e anonimato.
+            """)
+
+
         for nome_bloco, itens in blocos.items():
             st.markdown(f"### {nome_bloco}")
             meta = metadados_blocos.get(nome_bloco, {})
