@@ -4,7 +4,7 @@ metadados_blocos = {
     "1. Sociodemográfico": {
         "tipo": "sociodemografico",
         "tipos_personalizados": {
-            "Qual é o seu gênero?": ["","Masculinho", "Feminino", "Não-binário", "Outros"],
+            "Qual é o seu gênero?": ["","Masculino", "Feminino", "Não-binário", "Outros"],
             "Quantos anos você tem?": "numero",
             "Você mora em qual região do país?": ["","Norte","Nordeste","Sul","Sudeste","Centro-Oeste"],
             "Qual é a renda do seu núcleo familiar, em relação ao salário mínimo?": [
