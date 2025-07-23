@@ -30,32 +30,29 @@ LPFS_BF = [
 ]
 
 
-# 🔹 FFMQ-BR – Facetas de Mindfulness
-FFMQ_BR = [
-    "Eu percebo meus sentimentos e emoções sem ter que reagir a eles.",
-    "Eu me julgo como bom ou mau de acordo com os pensamentos que tenho.",
-    "É difícil encontrar as palavras certas para expressar como me sinto sobre as coisas.",
-    "Quando tenho pensamentos ruins, eu paro e tomo consciência deles sem ser levado por eles.",
-    "Quando faço algo, minha mente voa e me distraio facilmente.",
-    "Digo a mim mesmo que não deveria pensar da forma como estou me sentindo.",
-    "Eu percebo sons e sensações no meu corpo porque não encontro as palavras certas.",
-    "Não presto atenção no que faço porque fico pensando em outras coisas ou distraído.",
-    "É difícil para mim encontrar palavras que descrevam o que estou pensando.",
-    "Quando tenho pensamentos ruins, sou capaz de apenas notá-los, sem reagir a eles.",
-    "Percebo como os alimentos afetam meus pensamentos, sensações corporais e emoções.",
-    "Eu observo meus sentimentos sem me perder neles.",
-    "É difícil descrever as sensações no meu corpo porque não encontro as palavras certas.",
-    "Eu realizo tarefas automaticamente, sem prestar atenção no que estou fazendo.",
-    "Tenho tendência a julgar meus pensamentos como bons ou maus.",
-    "É difícil permanecer focado no que está acontecendo no momento presente.",
-    "Quando estou caminhando, eu percebo as sensações do meu corpo em movimento.",
-    "Em situações difíceis, eu consigo fazer uma pausa, sem reagir imediatamente.",
-    "Julgo alguns de meus pensamentos como sendo maus e eu não deveria pensar assim.",
-    "Eu consigo facilmente descrever minhas crenças, opiniões e expectativas em palavras.",
-    "Eu me critico por ter emoções irracionais ou inapropriadas.",
-    "Eu consigo descrever detalhadamente como me sinto no momento presente.",
-    "Eu percebo elementos visuais na arte ou na natureza tais como: cores, formatos, texturas.",
-    "Eu me distraio facilmente."
+# 🔹 LSM– Facetas de Mindfulness
+LSM = [
+    "Eu gosto de investigar sobre qualquer coisa.",
+    "Eu produzo poucas ideias novas.",
+    "Eu estou sempre aberto(a) a novas maneiras de fazer as coisas.",
+    "Eu me envolvo em quase tudo que faço.",
+    "Eu não procuro ativamente aprender coisas novas.",
+    "Eu faço muitas contribuições inovadoras.",
+    "Eu prefiro o jeito habitual e conhecido de fazer as coisas",
+    "Eu raramente noto o que as outras pessoas estão fazendo.",
+    "Eu evito conversas que provocam reflexões.",
+    "Eu sou muito criativo(a).",
+    "Eu consigo me comportar de várias formas diferentes em uma mesma situação.",
+    "Eu ligo com a situação como \"um todo\".",
+    "Eu sou muito curioso(a).",
+    "Eu tento pensar em novas maneiras de fazer as coisas.",
+    "Eu raramente estou ciente das mudanças.",
+    "Eu tenho uma mente aberta para tudo, até mesmo para coisas que desafiam minhas crenças mais importantes.",
+    "Eu gosto de ser desafiado(a) intelectualmente.",
+    "Eu acho fácil criar ideias novas e efetivas.",
+    "Eu raramente estou alerta aos novos acontecimentos das coisas ao meu redor.",
+    "Eu gosto de descobrir como as coisas funcionam.",
+    "Eu não sou uma pessoa que tem pensamentos originais."
 ]
 
 # 🔹 PID-5-BF – Inventário Breve de Personalidade do DSM-5

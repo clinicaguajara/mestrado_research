@@ -1,6 +1,6 @@
 import streamlit as st
 from modules.componentes import render_questionario_neurociencia
-from modules.itens_neurociencia import SOCIODEMOGRAFICO, LPFS_BF, FFMQ_BR, PID_5_BF, AQ_50
+from modules.itens_neurociencia import SOCIODEMOGRAFICO, LPFS_BF, LSM, PID_5_BF, AQ_50
 from modules.metadados import metadados_blocos
 from services.correcao_escala import corrigir_aq50_estatistico
 from services.export import preparar_resultado_exportacao_estatistico
@@ -13,7 +13,7 @@ st.set_page_config(page_title="Questionário Neurociência", layout="centered")
 BLOCOS = {
     "1. Sociodemográfico": SOCIODEMOGRAFICO,
     "2. LPFS-BF": LPFS_BF,
-    "3. FFMQ-BR": FFMQ_BR,
+    "3. LSM-21": LSM,
     "4. PID-5-BF": PID_5_BF,
     "5. AQ-50": AQ_50,
 }

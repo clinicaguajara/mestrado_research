@@ -35,17 +35,17 @@ metadados_blocos = {
     "2. LPFS-BF": {
         "tipo": "likert",
         "escala": (1, 4),
-        "labels": ("1 - Nada verdadeiro", "4 - Totalmente verdadeiro"),
+        "labels": ("1 - Muito falsa ou frequentemente falsa", "4 - Muito verdadeira ou frequentemente verdadeira"),
     },
-    "3. FFMQ-BR": {
+    "3. LSM": {
         "tipo": "likert",
-        "escala": (1, 5),
-        "labels": ("1 - Nunca ou muito raramente verdadeiro", "5 - Muito frequentemente verdadeiro"),
+        "escala": (1, 7),
+        "labels": ("1 - Discordo totalmente", "7 - Concordo totalmente"),
     },
     "4. PID-5-BF": {
         "tipo": "likert",
         "escala": (0, 3),
-        "labels": ("0 - Falso ou muito falso", "3 - Verdadeiro ou muito verdadeiro"),
+        "labels": ("0 - Discordo totalmente", "3 - Concordo totalmente"),
     },
     "5. AQ-50": {
         "tipo": "likert",
