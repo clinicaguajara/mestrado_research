@@ -52,7 +52,7 @@ if st.session_state["respostas_enviadas"]:
     exportavel = preparar_resultado_exportacao_estatistico(resultado)
 
     # Mostra em tabela
-    st.subheader("Correção automática do AQ-50 (grupo: " + grupo.replace("_", " ").title() + ")")
+    st.subheader("Correção automática do AQ-50 | grupo: " + grupo.replace("_", " ").title() + "")
     
     st.info("Baron-Cohen, S., Wheelwright, S., Skinner, R., Martin, J., & Clubley, E. (2001). The autism-spectrum quotient (AQ): Evidence from Asperger syndrome/high-functioning autism, males and females, scientists and mathematicians. Journal of Autism and Developmental Disorders, 31(1), 5–17. https://doi.org/10.1023/A:1005653411471")
 
