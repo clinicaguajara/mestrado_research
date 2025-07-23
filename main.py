@@ -54,12 +54,12 @@ if st.session_state["respostas_enviadas"]:
     st.subheader("📊 Correção automática do AQ-50 (grupo: " + grupo.replace("_", " ").title() + ")")
     # Mapeamento para renomear os fatores
     nomes_legiveis = {
-        "habilidades_sociais": "Habilidades sociais",
-        "atencao_alternada": "Atenção alternada",
-        "atencao_a_detalhes": "Atenção a detalhes",
-        "comunicacao": "Comunicação",
+        "habilidades_sociais": "Habilidades sociais disfuncionais",
+        "atencao_alternada": "Dificuldade em alternar a atenção",
+        "atencao_a_detalhes": "Atenção a detalhes (hiperfoco)",
+        "comunicacao": "Comunicação atípica",
         "imaginacao": "Imaginação literal",
-        "total": "Escore total",
+        "total": "Total",
     }
 
     # Aplica o mapeamento
