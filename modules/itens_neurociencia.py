@@ -52,7 +52,7 @@ LSM = [
     "Eu acho fácil criar ideias novas e efetivas.",
     "Eu raramente estou alerta aos novos acontecimentos das coisas ao meu redor.",
     "Eu gosto de descobrir como as coisas funcionam.",
-    "Eu não sou uma pessoa que tem pensamentos originais."
+    "Eu não sou uma pessoa que tem pensamentos originais.",
 ]
 
 # 🔹 PID-5-BF – Inventário Breve de Personalidade do DSM-5
