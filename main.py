@@ -51,8 +51,20 @@ if st.session_state["respostas_enviadas"]:
     exportavel = preparar_resultado_exportacao_estatistico(resultado)
 
     # Mostra em tabela
-    st.subheader("📊 Correção do AQ-50 (grupo: " + grupo.replace("_", " ").title() + ")")
+    st.subheader("📊 Correção automática do AQ-50 (grupo: " + grupo.replace("_", " ").title() + ")")
+    # Mapeamento para renomear os fatores
+    nomes_legiveis = {
+        "habilidades_sociais": "Habilidades sociais",
+        "atencao_alternada": "Atenção alternada",
+        "atencao_a_detalhes": "Atenção a detalhes",
+        "comunicacao": "Comunicação",
+        "imaginacao": "Imaginação literal",
+        "total": "Escore total",
+    }
+
+    # Aplica o mapeamento
     df = pd.DataFrame(resultado).T[["escore", "percentil_estimado"]]
+    df.index = df.index.map(nomes_legiveis.get)
     st.dataframe(df, use_container_width=True)
 
     # Botões de download
