@@ -45,7 +45,7 @@ metadados_blocos = {
     "4. PID-5-BF": {
         "tipo": "likert",
         "escala": (0, 3),
-        "labels": ("1 - Muito falso ou frequentemente falso", "4 - Muito verdadeiro ou frequentemente verdadeiro"),
+        "labels": ("0 - Muito falso ou frequentemente falso", "3 - Muito verdadeiro ou frequentemente verdadeiro"),
     },
     "5. AQ-50": {
         "tipo": "likert",
