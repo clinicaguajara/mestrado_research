@@ -36,20 +36,45 @@ metadados_blocos = {
         "tipo": "likert",
         "escala": (1, 4),
         "labels": ("1 - Muito falsa ou frequentemente falsa", "4 - Muito verdadeira ou frequentemente verdadeira"),
+        "respostas": [
+            "1 - Muito falsa ou frequentemente falsa",
+            "2",
+            "3",
+            "4 - Muito verdadeira ou frequentemente verdadeira",
+        ],
     },
-    "3. LSM": {
+    "3. CFQ": {
         "tipo": "likert",
-        "escala": (1, 7),
-        "labels": ("1 - Discordo totalmente", "7 - Concordo totalmente"),
+        "escala": (0, 4),
+        "labels": ("0 - Nunca", "4 - Quase sempre"),
+        "respostas": [
+            "Nunca",
+            "Raramente",
+            "Ocasionalmente",
+            "Frequentemente",
+            "Quase sempre",
+        ],
     },
     "4. PID-5-BF": {
         "tipo": "likert",
         "escala": (0, 3),
         "labels": ("0 - Muito falso ou frequentemente falso", "3 - Muito verdadeiro ou frequentemente verdadeiro"),
+        "respostas": [
+            "0 - Muito falso ou frequentemente falso",
+            "1",
+            "2",
+            "3 - Muito verdadeiro ou frequentemente verdadeiro",
+        ],
     },
     "5. AQ-50": {
         "tipo": "likert",
         "escala": (1, 4),
         "labels": ("1 - Discordo totalmente", "4 - Concordo totalmente"),
+        "respostas": [
+            "1 - Discordo totalmente",
+            "2",
+            "3",
+            "4 - Concordo totalmente",
+        ],
     },
 }

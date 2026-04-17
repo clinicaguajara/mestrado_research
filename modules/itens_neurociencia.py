@@ -30,29 +30,33 @@ LPFS_BF = [
 ]
 
 
-# 🔹 LSM– Facetas de Mindfulness
-LSM = [
-    "Eu gosto de investigar sobre qualquer coisa.",
-    "Eu produzo poucas ideias novas.",
-    "Eu estou sempre aberto(a) a novas maneiras de fazer as coisas.",
-    "Eu me envolvo em quase tudo que faço.",
-    "Eu não procuro ativamente aprender coisas novas.",
-    "Eu faço muitas contribuições inovadoras.",
-    "Eu prefiro o jeito habitual e conhecido de fazer as coisas",
-    "Eu raramente noto o que as outras pessoas estão fazendo.",
-    "Eu evito conversas que provocam reflexões.",
-    "Eu sou muito criativo(a).",
-    "Eu consigo me comportar de várias formas diferentes em uma mesma situação.",
-    "Eu ligo com a situação como \"um todo\".",
-    "Eu sou muito curioso(a).",
-    "Eu tento pensar em novas maneiras de fazer as coisas.",
-    "Eu raramente estou ciente das mudanças.",
-    "Eu tenho uma mente aberta para tudo, até mesmo para coisas que desafiam minhas crenças mais importantes.",
-    "Eu gosto de ser desafiado(a) intelectualmente.",
-    "Eu acho fácil criar ideias novas e efetivas.",
-    "Eu raramente estou alerta aos novos acontecimentos das coisas ao meu redor.",
-    "Eu gosto de descobrir como as coisas funcionam.",
-    "Eu não sou uma pessoa que tem pensamentos originais.",
+# 🔹 CFQ – Questionário de Falhas Cognitivas
+CFQ = [
+    "Você lê alguma coisa, percebe que não estava prestando atenção e precisa lê-la novamente?",
+    "Você se esquece por que foi de um cômodo a outro dentro de casa?",
+    "Você deixa de notar placas de sinalização ao dirigir?",
+    "Você confunde esquerda e direita ao indicar o caminho a alguém?",
+    "Você esbarra (“tromba”) em outras pessoas?",
+    "Você esquece se apagou a luz, a chama do fogão ou se trancou a porta?",
+    "Você não se atenta ao nome da pessoa quando ela está sendo apresentada a você?",
+    "Você diz alguma coisa e depois percebe que isso pode ter sido interpretado como um insulto?",
+    "Você tem dificuldade em escutar as pessoas falando com você quando está fazendo outra coisa?",
+    "Você perde a calma e se arrepende?",
+    "Você deixa cartas, mensagens ou e-mails importantes sem resposta por dias?",
+    "Você esquece aonde virar em um caminho que conhece bem, mas usa pouco?",
+    "Você tem dificuldades em achar o que você quer no supermercado, embora o produto esteja por lá?",
+    "Você se encontra subitamente pensando se usou uma palavra de forma correta?",
+    "Você tem problemas em se decidir?",
+    "Você esquece os seus compromissos?",
+    "Você esquece onde colocou alguma coisa, como o jornal, o celular ou suas chaves?",
+    "Você acidentalmente joga fora algo que queria guardar e fica com aquilo que queria descartar (por exemplo, joga fora uma bala e guarda seu papel no bolso)?",
+    "Você “viaja” ou fica “no mundo da lua” quando deveria estar ouvindo alguma coisa?",
+    "Você esquece o nome das pessoas?",
+    "Você começa a fazer alguma coisa em casa e se distrai fazendo algo diferente (sem querer)?",
+    "Você não consegue se lembrar de alguma coisa, mesmo que esteja “na ponta da língua”?",
+    "Você se esquece do que saiu para comprar?",
+    "Você deixa as coisas caírem (as derruba)?",
+    "Você não consegue pensar em nada para dizer?",
 ]
 
 # 🔹 PID-5-BF – Inventário Breve de Personalidade do DSM-5

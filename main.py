@@ -1,21 +1,29 @@
 import streamlit as st
 from modules.componentes import render_questionario_neurociencia
-from modules.itens_neurociencia import SOCIODEMOGRAFICO, LPFS_BF, LSM, PID_5_BF, AQ_50
+from modules.itens_neurociencia import SOCIODEMOGRAFICO, LPFS_BF, CFQ, PID_5_BF, AQ_50
 from modules.metadados import metadados_blocos
 from services.correcao_escala import corrigir_aq50_estatistico
 from services.export import preparar_resultado_exportacao_estatistico
 import pandas as pd
 
 # Config da página
-st.set_page_config(page_title="Questionário Neurociência", layout="centered")
+st.set_page_config(page_title="Questionário de Saúde Mental do XXº Congresso da Sociedade Brasileira de Ciência da Computação", layout="centered")
 
 # Define os blocos do questionário
 BLOCOS = {
     "1. Sociodemográfico": SOCIODEMOGRAFICO,
     "2. LPFS-BF": LPFS_BF,
-    "3. LSM-21": LSM,
+    "3. CFQ": CFQ,
     "4. PID-5-BF": PID_5_BF,
     "5. AQ-50": AQ_50,
+}
+
+BLOCOS_TITULOS = {
+    "1. Sociodemográfico": "1. Sociodemográfico",
+    "2. LPFS-BF": "Parte 1",
+    "3. CFQ": "Parte 2",
+    "4. PID-5-BF": "Parte 3",
+    "5. AQ-50": "Parte 4",
 }
 
 # Inicializa o estado
@@ -26,7 +34,7 @@ if "respostas" not in st.session_state:
 
 # Renderiza o formulário apenas se ainda não foi enviado
 if not st.session_state["respostas_enviadas"]:
-    payload = render_questionario_neurociencia(BLOCOS, metadados_blocos)
+    payload = render_questionario_neurociencia(BLOCOS, metadados_blocos, display_titles=BLOCOS_TITULOS)
     if payload:
         st.session_state["respostas_enviadas"] = True
         st.session_state["respostas"] = payload["respostas"]

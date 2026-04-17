@@ -3,7 +3,11 @@ import streamlit as st
 from typing import Dict, List
 from services.supabase_storage import salvar_respostas_supabase
 
-def render_questionario_neurociencia(blocos: Dict[str, List[str]], metadados_blocos: Dict[str, dict]) -> dict | None:
+def render_questionario_neurociencia(
+    blocos: Dict[str, List[str]],
+    metadados_blocos: Dict[str, dict],
+    display_titles: dict[str, str] | None = None,
+) -> dict | None:
     """
     Renderiza um questionário neurocientífico com tipos mistos (Likert, selectbox, campo aberto),
     com validação de campos obrigatórios no bloco sociodemográfico.
@@ -44,7 +48,8 @@ def render_questionario_neurociencia(blocos: Dict[str, List[str]], metadados_blo
         campos_vazios = []
 
         for nome_bloco, itens in blocos.items():
-            st.markdown(f"### {nome_bloco}")
+            titulo_exibicao = display_titles.get(nome_bloco, nome_bloco) if display_titles else nome_bloco
+            st.markdown(f"### {titulo_exibicao}")
             meta = metadados_blocos.get(nome_bloco, {})
             tipo_bloco = meta.get("tipo", "likert")
             escala = meta.get("escala", (1, 7))
@@ -61,6 +66,8 @@ def render_questionario_neurociencia(blocos: Dict[str, List[str]], metadados_blo
                     tipo_item = tipos_personalizados.get(item)
                     if tipo_item == "numero":
                         resposta = st.number_input(item, min_value=0, max_value=120, step=1, key=chave)
+                        if resposta == 0:
+                            campos_vazios.append(item)
                     elif isinstance(tipo_item, list) and tipo_item:
                         resposta = st.selectbox(item, options=tipo_item, key=chave, index=0)
                         if resposta == "":
@@ -71,17 +78,36 @@ def render_questionario_neurociencia(blocos: Dict[str, List[str]], metadados_blo
                             campos_vazios.append(item)
 
                 elif tipo_bloco == "likert":
-                    resposta = st.slider(
-                        label=f"{contador}. {item}",
-                        min_value=escala[0],
-                        max_value=escala[1],
-                        value=(escala[0] + escala[1]) // 2,
-                        format="%d",
-                        key=chave,
-                    )
+                    resposta_textos = meta.get("respostas")
+                    if resposta_textos:
+                        opcoes_likert = [""] + resposta_textos
+                        resposta_selecionada = st.selectbox(
+                            label=f"{contador}. {item}",
+                            options=opcoes_likert,
+                            index=0,
+                            key=chave,
+                        )
+                        if resposta_selecionada == "":
+                            resposta = ""
+                            campos_vazios.append(f"{contador}. {item}")
+                        else:
+                            resposta = escala[0] + resposta_textos.index(resposta_selecionada)
+                    else:
+                        opcoes = [""] + list(range(escala[0], escala[1] + 1))
+                        resposta = st.selectbox(
+                            label=f"{contador}. {item}",
+                            options=opcoes,
+                            format_func=lambda valor: "" if valor == "" else str(valor),
+                            index=0,
+                            key=chave,
+                        )
+                        if resposta == "":
+                            campos_vazios.append(f"{contador}. {item}")
 
                 else:
                     resposta = st.text_input(label=item, key=chave)
+                    if not str(resposta).strip():
+                        campos_vazios.append(item)
 
                 respostas_usuario[chave] = resposta
                 contador += 1
@@ -120,7 +146,7 @@ def render_questionario_neurociencia(blocos: Dict[str, List[str]], metadados_blo
         
         if enviado:
             if campos_vazios:
-                st.error("⚠️ Por favor, responda todas as perguntas do bloco sociodemográfico antes de enviar.")
+                st.error("⚠️ Por favor, preencha todas as perguntas antes de enviar.")
                 return None
 
             if not aceitou_termo:
